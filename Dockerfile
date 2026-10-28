@@ -1,0 +1,16 @@
+# n8n for Render (free web service). Secrets are NOT in this file: set them in Render > Environment.
+FROM docker.io/n8nio/n8n:2.19.2
+
+ENV N8N_PORT=10000
+ENV N8N_PROXY_HOPS=1
+ENV GENERIC_TIMEZONE=Asia/Kolkata
+ENV TZ=Asia/Kolkata
+ENV EXECUTIONS_DATA_PRUNE=true
+ENV EXECUTIONS_DATA_MAX_AGE=168
+ENV DB_TYPE=postgresdb
+ENV DB_POSTGRESDB_DATABASE=postgres
+ENV DB_POSTGRESDB_PORT=5432
+ENV DB_POSTGRESDB_SSL=true
+ENV DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
+
+EXPOSE 10000
